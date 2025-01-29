@@ -1,0 +1,4 @@
+lala,90
+hana,80
+nana,70
+zool,70
