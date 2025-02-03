@@ -1,4 +1,2 @@
-lala,90
-hana,80
-nana,70
-zool,70
+john,10,20,30
+john,10,20,30

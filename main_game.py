@@ -1,16 +1,22 @@
 import os
 
-def clear():
+def clear(): #<---- clear the screen
     os.system('cls' if os.name == 'nt' else 'clear')
 
+def congrats():
+    print ("=============================================================")
+    print ("Congratulations! You have completed the game!")
+    print ("=============================================================")
+
+#greet and get user name
+clear()
+print ("=============================================================")
+print ("Welcome to HAIA games!")
+print ("=============================================================")
+name = input ("Please enter your name: ")
+    
 while True:
-    clear()
-    print ("=============================================================")
-    print ("Welcome to HAIA games!")
-    print ("=============================================================")
-    name = input ("Please enter your name: ")
-    
-    
+    #game selection
     clear()
     print("==============================================================")
     print ("Greetings", name, "! Here's a list of games you can play:")
@@ -24,7 +30,11 @@ while True:
     if choice == "1":
         print ("You have chosen Wordle!")
         input ("Press Enter to play...")
-        break
+        
+        clear()
+        congrats()
+        input ("Press Enter to continue...")
+
     elif choice == "2":
         print ("You have chosen Hangman!")
         input ("Press Enter to play...")
