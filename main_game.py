@@ -10,6 +10,7 @@ def congrats():
     print ("=============================================================")
 
 #greet and get user name
+
 clear()
 print ("=============================================================")
 print ("Welcome to HAIA games!")
@@ -17,8 +18,6 @@ print ("=============================================================")
 name = input ("Please enter your name: ")
     
 def play_game():
-
-    congrats()
 
     #game selection
     clear()
@@ -46,3 +45,21 @@ def play_game():
         #break
 
 play_game()
+
+'''
+while True:
+    i = 0
+
+    if i == 0:
+        i = i + 1
+        clear()
+        print (i)
+        name = input ("Please enter your name: ")
+
+        intro()
+        play_game()
+
+    else:
+        intro()
+        play_game()
+'''

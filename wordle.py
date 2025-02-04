@@ -22,7 +22,11 @@ def replay(): #asks user if they would like to play again
         gameloop()
     else:
         print("Thank you for playing Wordle!")
-        exit()
+        input ("Presss any keys...") #  %H added
+        #exit()
+
+        from main_game import play_game #  %H added
+        play_game() #  %H added
     
 
 def clear(): #clears the screen
