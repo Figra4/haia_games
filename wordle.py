@@ -17,10 +17,10 @@ from random import choice
 score  = 0  
 
 def replay(): #asks user if they would like to play again
-    rep = input("Would you like to play again? Y/N: ")
-    if rep == "Y":
+    rep = input("Would you like to play again? type Y to continue: ")
+    if rep == "Y" or rep == "y":
         gameloop()
-    elif rep == "N":
+    else:
         print("Thank you for playing Wordle!")
         exit()
     
@@ -31,9 +31,12 @@ def clear(): #clears the screen
 def gameloop():
     word = random.choice(worldlewordlist) #randomly selects word from list
     wordleword = list(word) #converts word to usable letters in list
-    #print (word) #for testing purposes
-    #print (wordleword)
-    print("Welcome to Wordle! I'm sure you know how to play the game so let's get started!")
+    print (word) #for testing purposes
+    print (wordleword)
+    print("Welcome to Wordle! I'm sure you know how to play the game so let's get started!")   
+    print("Y means the correct letter in correct position")
+    print("C means the letter is in wrong position")
+    print("X means the letter is not in the word")
     attempts = 5
     while attempts >0:  
         userreturn = " "
@@ -49,20 +52,16 @@ def gameloop():
                 userreturn += "C"
             else:
                 userreturn += "X"
-        attempts -= 1
-        print(userreturn)
-        print("Attempts left: ", attempts)
-        if userinput == word:
-            attempts += 1
-            print("You have won the game! Congratulations!")
-            score = attempts + 10
-            print("you scored: ", score)
-            replay()
-        if attempts == 0:
-            print("You have lost the game! The word was: ", word)
-            print("You scored: 0 ")
-            replay()
-            
+        if userinput != word:
+            attempts -= 1
+            print(userreturn)
+            print("Attempts left: ", attempts)
+        else:
+            print("Congratulations! You guessed the word!")
+            print("You scored: ", attempts + 10)
+            replay()     
+    print("You have run out of attempts! The word was: ", word)
+    replay()   
 clear()
 gameloop() 
 
