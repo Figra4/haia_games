@@ -3,6 +3,7 @@ import os
 def clear(): #<---- clear the screen
     os.system('cls' if os.name == 'nt' else 'clear')
 
+#congratulates user (this is test only)
 def congrats():
     print ("=============================================================")
     print ("Congratulations! You have completed the game!")
@@ -15,7 +16,10 @@ print ("Welcome to HAIA games!")
 print ("=============================================================")
 name = input ("Please enter your name: ")
     
-while True:
+def play_game():
+
+    congrats()
+
     #game selection
     clear()
     print("==============================================================")
@@ -28,18 +32,17 @@ while True:
     choice = input ("Which game would you like to play? : ")
 
     if choice == "1":
-        print ("You have chosen Wordle!")
-        input ("Press Enter to play...")
-        
-        clear()
-        congrats()
-        input ("Press Enter to continue...")
+
+        import wordle
+        wordle.gameloop()  #open wordle game
 
     elif choice == "2":
         print ("You have chosen Hangman!")
         input ("Press Enter to play...")
-        break
+        #break
     elif choice == "3":
         print ("You have chosen Math Quiz!")
         input ("Press Enter to play...")
-        break
+        #break
+
+play_game()
