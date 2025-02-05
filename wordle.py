@@ -4,8 +4,8 @@
 # Lecture / Lab Section: TC3L / TL3L
 # Trimester: 2430
 # Names: Imran Haris Bin Mohd Azli | MEMBER_NAME_2 | MEMBER_NAME_3 | MEMBER_NAME_4
-# IDs: MEMBER_ID_1 | MEMBER_ID_2 | MEMBER_ID_3 | MEMBER_ID_3
-# Emails: MEMBER_EMAIL_1 | MEMBER_EMAIL_2 | MEMBER_EMAIL_3 | MEMBER_EMAIL_3
+# IDs: 1221107067 | MEMBER_ID_2 | MEMBER_ID_3 | MEMBER_ID_3
+# Emails: 1221107067@mmu.edu.my | MEMBER_EMAIL_2 | MEMBER_EMAIL_3 | MEMBER_EMAIL_3
 # *************************************************************************
 
 
