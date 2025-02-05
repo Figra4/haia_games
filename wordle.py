@@ -13,6 +13,7 @@ import os
 from wordlist import worldlewordlist
 import random
 from random import choice
+from pySave import saveScore #save player score - H%
 
 score  = 0  
 
@@ -22,17 +23,17 @@ def replay(): #asks user if they would like to play again
         gameloop()
     else:
         print("Thank you for playing Wordle!")
-        input ("Presss any keys...") #  %H added
         #exit()
 
-        from main_game import play_game #  %H added
-        play_game() #  %H added
+        input ("Press any keys to continue...") #  %H added
+        import play_game #  to return back to game select - %H
     
 
 def clear(): #clears the screen
     os.system('cls')
 
-def gameloop():
+def gameloop(name):
+    
     word = random.choice(worldlewordlist) #randomly selects word from list
     wordleword = list(word) #converts word to usable letters in list
     print (word) #for testing purposes
@@ -42,9 +43,11 @@ def gameloop():
     print("C means the letter is in wrong position")
     print("X means the letter is not in the word")
     attempts = 5
-    while attempts >0:  
-        userreturn = " "
-        userinput = input("Guess the word: ")
+    while attempts >0:
+
+        userreturn = ""
+        print (attempts)
+        userinput = input("Guess the word1: ")
         if len(userinput) != 5:
             print("Please enter a 5 letter word")
             continue
@@ -61,13 +64,15 @@ def gameloop():
             print(userreturn)
             print("Attempts left: ", attempts)
         else:
+            score = attempts + 10
             print("Congratulations! You guessed the word!")
-            print("You scored: ", attempts + 10)
+            print("You scored: ", score) # I change a bit -H%
+            saveScore(name, score, "wordle") #save player score - H%
             replay()     
     print("You have run out of attempts! The word was: ", word)
     replay()   
-clear()
-gameloop() 
+#clear()
+#gameloop() 
 
 
 # sources:

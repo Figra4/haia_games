@@ -1,65 +1,52 @@
 import os
+from wordle import gameloop
+from Math_Quiz import play
+from Hangman import hangman
+
+name = ""
 
 def clear(): #<---- clear the screen
     os.system('cls' if os.name == 'nt' else 'clear')
 
-#congratulates user (this is test only)
-def congrats():
-    print ("=============================================================")
-    print ("Congratulations! You have completed the game!")
-    print ("=============================================================")
 
-#greet and get user name
-
-clear()
-print ("=============================================================")
-print ("Welcome to HAIA games!")
-print ("=============================================================")
-name = input ("Please enter your name: ")
-    
 def play_game():
 
-    #game selection
-    clear()
-    print("==============================================================")
-    print ("Greetings", name, "! Here's a list of games you can play:")
-    print ("1. Wordle")
-    print ("2. Hangman")
-    print ("3. Math Quiz")
-    print("==============================================================")
-    
-    choice = input ("Which game would you like to play? : ")
-
-    if choice == "1":
-
-        import wordle
-        wordle.gameloop()  #open wordle game
-
-    elif choice == "2":
-        print ("You have chosen Hangman!")
-        input ("Press Enter to play...")
-        #break
-    elif choice == "3":
-        print ("You have chosen Math Quiz!")
-        input ("Press Enter to play...")
-        #break
-
-play_game()
-
-'''
-while True:
-    i = 0
-
-    if i == 0:
-        i = i + 1
+    while True:
+        #game selection
         clear()
-        print (i)
-        name = input ("Please enter your name: ")
+        print("==============================================================")
+        print ("Greetings", name, "! Here's a list of games you can play:")
+        print ("1. Wordle")
+        print ("2. Hangman")
+        print ("3. Math Quiz")
+        print ("Want to check your score? Press z")
+        print("==============================================================")
+        
+        choice = input ("Which game would you like to play? : ")
 
-        intro()
-        play_game()
+        if choice == "1":
 
-    else:
-        intro()
-        play_game()
-'''
+            gameloop(name) #open wordle game
+
+        elif choice == "2":
+            
+            hangman(name)
+
+        elif choice == "3":
+
+            play(name)
+
+        elif choice == "z":
+
+            from pySave import checkScore
+            checkScore()
+
+def intro():
+    clear()
+    print ("=============================================================")
+    print ("Welcome to HAIA games!")
+    print ("=============================================================")
+    global name 
+    name = input ("Please enter your name: ")
+
+    play_game()

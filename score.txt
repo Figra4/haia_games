@@ -1,2 +1,6 @@
-john,10,20,30
-john,10,20,30
+
+hana, 15, wordle
+hana, 15, wordle
+hana, 10, wordle
+hana, 0, wordle
+hana, 5, math quiz
