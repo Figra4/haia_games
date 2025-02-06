@@ -1,11 +1,11 @@
 # *************************************************************************
-# Program: Wordle.py
+# Program: HAIA_games.py
 # Course: CSP1114 PROBLEM SOLVING AND PROGRAM DESIGN
 # Lecture / Lab Section: TC3L / TL3L
 # Trimester: 2430
-# Names: Imran Haris Bin Mohd Azli | MEMBER_NAME_2 | MEMBER_NAME_3 | MEMBER_NAME_4
+# Names: Imran Haris  | HANA HUMAIRAH | MUHAMMAD ADAM HAZRIQ | ALISHA SOFEA
 # IDs: 1221107067 | MEMBER_ID_2 | MEMBER_ID_3 | MEMBER_ID_3
-# Emails: 1221107067@mmu.edu.my | MEMBER_EMAIL_2 | MEMBER_EMAIL_3 | MEMBER_EMAIL_3
+# Emails: 1221107067@mmu.edu.my | MEMBER_EMAIL_2 | MUHAMMAD.ADAM.HAZRIQ@student.mmu.edu.my | alisha.sofea.ali@student.mmu.edu.my
 # *************************************************************************
 
 
@@ -17,10 +17,10 @@ from pySave import saveScore #save player score - H%
 
 score  = 0  
 
-def replay(): #asks user if they would like to play again
+def replay(name): #asks user if they would like to play again
     rep = input("Would you like to play again? type Y to continue: ")
     if rep == "Y" or rep == "y":
-        gameloop()
+        gameloop(name)
     else:
         print("Thank you for playing Wordle!")
         #exit()
@@ -46,7 +46,7 @@ def gameloop(name):
     while attempts >0:
 
         userreturn = ""
-        print (attempts)
+        print (f"you have {attempts} attempts left")
         userinput = input("Guess the word1: ")
         if len(userinput) != 5:
             print("Please enter a 5 letter word")
@@ -68,9 +68,9 @@ def gameloop(name):
             print("Congratulations! You guessed the word!")
             print("You scored: ", score) # I change a bit -H%
             saveScore(name, score, "wordle") #save player score - H%
-            replay()     
+            replay(name)     
     print("You have run out of attempts! The word was: ", word)
-    replay()   
+    replay(name)   
 #clear()
 #gameloop() 
 
