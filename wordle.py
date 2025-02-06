@@ -4,8 +4,8 @@
 # Lecture / Lab Section: TC3L / TL3L
 # Trimester: 2430
 # Names: Imran Haris  | HANA HUMAIRAH | MUHAMMAD ADAM HAZRIQ | ALISHA SOFEA
-# IDs: 1221107067 | MEMBER_ID_2 | MEMBER_ID_3 | MEMBER_ID_3
-# Emails: 1221107067@mmu.edu.my | MEMBER_EMAIL_2 | MUHAMMAD.ADAM.HAZRIQ@student.mmu.edu.my | alisha.sofea.ali@student.mmu.edu.my
+# IDs: 1221107067 | 242FC241PB | MEMBER_ID_3 | MEMBER_ID_3
+# Emails: 1221107067@mmu.edu.my | HANA.HUMAIRAH.ZOOL@student.mmu.edu.my | MUHAMMAD.ADAM.HAZRIQ@student.mmu.edu.my | alisha.sofea.ali@student.mmu.edu.my
 # *************************************************************************
 
 
