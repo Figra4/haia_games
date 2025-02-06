@@ -36,8 +36,8 @@ def gameloop(name):
     
     word = random.choice(worldlewordlist) #randomly selects word from list
     wordleword = list(word) #converts word to usable letters in list
-    print (word) #for testing purposes
-    print (wordleword)
+    #print (word) #for testing purposes
+    #print (wordleword)
     print("Welcome to Wordle! I'm sure you know how to play the game so let's get started!")   
     print("Y means the correct letter in correct position")
     print("C means the letter is in wrong position")
