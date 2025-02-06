@@ -11,7 +11,7 @@ def hangman(name): #H%
     #spliting each word in the string and choose it
     WordsCandidates = WordsCandidates.split(' ')
     Word = random.choice(WordsCandidates)
-    print (Word) #test only -H%
+    #print (Word) #test only -H%
     #user interface
     print ("Guess the word! HINT: word is name of a stationery")
 
