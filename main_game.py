@@ -9,7 +9,7 @@ def clear(): #<---- clear the screen
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
-def play_game():
+def play_game(name):
 
     while True:
         #game selection
@@ -49,4 +49,4 @@ def intro():
     global name 
     name = input ("Please enter your name: ")
 
-    play_game()
+    play_game(name)
