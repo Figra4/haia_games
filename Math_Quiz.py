@@ -8,12 +8,11 @@
 # Emails: 1221107067@mmu.edu.my | HANA.HUMAIRAH.ZOOL@student.mmu.edu.my | MUHAMMAD.ADAM.HAZRIQ@student.mmu.edu.my | alisha.sofea.ali@student.mmu.edu.my
 # *************************************************************************
 
-
 from pySave import saveScore #save player score - H%
 
-score = 0
 def Quiz():
-    global score
+    score = 0
+
     Q1Valid = False
     while not Q1Valid:
         answerQ1 = input("First Question: 2 + 2 = ?")
@@ -87,33 +86,35 @@ def Quiz():
                 print("Incorrect answer")
                 Q5Valid = True
 
+    return score
+
 def enter():
-    
-    question=input("Continue?")
-    answer=str(question)
-    
-    if answer == "yes":
+    question = input("Continue?")
+    answer = str(question)
+
+    if answer.lower() == "yes":
         print("Great ! Let's get started.")
-        Quiz()
-    elif answer == "no":
+        score = Quiz()
+        return score
+    elif answer.lower() == "no":
         print("Welp, there's other games to play ! Bye !")
-        
-        #exit()
+        exit()
     else:
         print("Not sure what that means... try answering with a yes or no")
-        enter()
-
+        return enter()
+    
 def play(name):
     print("Welcome to Adam's Math Quiz !")
     print("In this game you are going to answer some math quizzes :)")
-    enter()
+    score = enter()
 
     print("You've answered all the questions !")
     print(f"Your score is {score} out of 5")
     print("Thanks for playing !")
 
-    
     saveScore(name, score, "math quiz") #save player score - H%
 
-    input ("Press any keys to contiue...")#  %H added
+    input ("Press any keys to contiue...")#  %H added 
 
+#Call the play function to start the game
+play("Player")
