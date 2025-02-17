@@ -17,10 +17,11 @@ def hangman(name): #H%
     #declaring variable for list of words that will be picked randomly
     WordsCandidates = "pencil pen book cellotape calculator paper stapler marker ruler eraser"
 
-    #spliting each word in the string and choose it
+    #spliting each word in the string
     WordsCandidates = WordsCandidates.split(' ')
-    Word = random.choice(WordsCandidates)
-    #print (Word) #test only -H%
+    #returns a random element from a sequence
+    Word = random.choice(WordsCandidates) 
+    #print (Word) 
     #user interface
     print ("Guess the word! HINT: word is name of a stationery")
 
