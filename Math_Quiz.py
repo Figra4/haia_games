@@ -10,9 +10,9 @@
 
 from pySave import saveScore #save player score - H%
 
-def Quiz():
-    score = 0
+score = 0
 
+def Quiz(): #changed this - H%
     Q1Valid = False
     while not Q1Valid:
         answerQ1 = input("First Question: 2 + 2 = ?")
@@ -117,4 +117,4 @@ def play(name):
     input ("Press any keys to contiue...")#  %H added 
 
 #Call the play function to start the game
-play("Player")
+#play("Player") - I disable this -H%
