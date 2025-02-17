@@ -28,7 +28,7 @@ def hangman(name): #H%
     #printing empty spaces for letters of the word
     for i in Word:
         print ('_', end=" ")
-        playing = True # storing the letters guessed by the player
+    #storing the letters guessed by the player
         LetterGuessed = ''
         chances = len(Word)+2
         correct = 0
@@ -44,7 +44,7 @@ def hangman(name): #H%
                     print ("Enter only a letter!")
                     continue
 
-    #Validation of a guess
+    #Validation of a guess .isalpha() is a method to check if all the all characters are alphabet in python. It returns true if correct and false if not alphabet
                 if not guess.isalpha():
                     print ("Enter only a LETTER")
                     continue
@@ -61,7 +61,7 @@ def hangman(name): #H%
                     for _ in range (LetterGuessedCounter):
                         LetterGuessed += guess
 
-    #Print the word
+    #Print the word end = '' is to prevent starting new line for any string
                     for char in Word:
                         if char in LetterGuessed and (Counter(LetterGuessed)) != (Counter(Word)):
                             print (char, end = '')
